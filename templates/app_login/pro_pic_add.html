@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_Block %}profile{% endblock %}
+{% block body_block %}
+<h2>Add Your DP</h2>
+<form method="POST" enctype="multipart/form-data">  <!--jshob form a file upload kora hoi shekhan a enctype dite hoi-->
+    {{ form|crispy }}
+    {% csrf_token %}
+
+    <button type="submit" class="btn btn-success btn-sm" >Add DP </button>
+
+</form>
+
+{% endblock %}
